@@ -50,9 +50,11 @@ override['statsd']['graphite_port'] = 2003
 override['statsd']['graphite_host'] = 'localhost'
 
 # Collectd
-override['collectd']['collectd_web']['http_port'] = node['monigusto']['port']['collectd_web']
-override['collectd']['collectd_web']['server_ip'] = "127.0.0.1"
+override['collectd']['server_ip'] = "127.0.0.1"
 override['collectd']['server_role'] = "monigusto_server"
+override['collectd']['collectd_web']['path'] = "/opt/collectd_web"
+override['collectd']['collectd_web']['http_port'] = node['monigusto']['port']['collectd_web']
+override['collectd']['enable_rrdtool_plugin'] = true
 
 # Nagios
 override['nagios']['server_auth_method'] = "htauth"
