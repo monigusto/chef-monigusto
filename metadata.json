@@ -1,0 +1,30 @@
+{
+  "name": "monigusto",
+  "description": "Installs monigusto client and server",
+  "long_description": "= DESCRIPTION:\n",
+  "maintainer": "Patrick Debois",
+  "maintainer_email": "Patrick.Debois@jedi.be",
+  "license": "Apache 2.0",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.0.1"
+}
