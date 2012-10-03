@@ -5,6 +5,7 @@ default['monigusto']['port']['graphite_web'] = 8081
 default['monigusto']['port']['collectd_web'] = 8082
 default['monigusto']['port']['kibana'] = 8083
 default['monigusto']['port']['tasseo'] = 8084
+default['monigusto']['server_role'] = "monigusto_server"
 
 # Nginx
 override['nginx']['default_site_enabled'] = false
@@ -51,7 +52,7 @@ override['statsd']['graphite_host'] = 'localhost'
 
 # Collectd
 override['collectd']['server_ip'] = "127.0.0.1"
-override['collectd']['server_role'] = "monigusto_server"
+override['collectd']['server_role'] = node['monigusto']['server_role']
 override['collectd']['collectd_web']['path'] = "/opt/collectd_web"
 override['collectd']['collectd_web']['http_port'] = node['monigusto']['port']['collectd_web']
 override['collectd']['enable_rrdtool_plugin'] = true
@@ -59,5 +60,5 @@ override['collectd']['enable_rrdtool_plugin'] = true
 # Nagios
 override['nagios']['server_auth_method'] = "htauth"
 override['nagios']['http_port'] = node['monigusto']['port']['nagios']
-override['nagios']['server_role'] = "monigusto_server"
+override['nagios']['server_role'] = node['monigusto']['server_role']
 override['nagios']['notifications_enabled'] = 1
