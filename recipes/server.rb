@@ -26,5 +26,4 @@ include_recipe "collectd::server"
 include_recipe "collectd::collectd_web"
 include_recipe 'collectd-elasticsearch'
 include_recipe 'ntp'
-
 include_recipe "monigusto::server_collectd"
